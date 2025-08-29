@@ -143,7 +143,7 @@ Returns a JSON response with a message containing GitHub documentation link.
 ```
 
 #### Get Quotes by Character
-**GET** `/himym/quotes/character/:id`
+**GET** `/himym/quotes/characters/:id`
 
 **Query Parameters:**
 - `page` (optional) - Page number (default: 1)
@@ -152,7 +152,7 @@ Returns a JSON response with a message containing GitHub documentation link.
 **Response:** Same structure as "Get All Quotes" but filtered by character
 
 #### Get Random Quote by Character
-**GET** `/himym/quotes/character/:id/random`
+**GET** `/himym/quotes/characters/:id/random`
 
 **Response:** Single quote object for the specified character
 

@@ -83,7 +83,7 @@ publicrouter.get("/quotes/:id", async (req, res) => {
   }
 });
 
-publicrouter.get("/quotes/character/:id", async (req, res) => {
+publicrouter.get("/quotes/characters/:id", async (req, res) => {
   try {
     const characterId = parseInt(req.params.id);
     const page = parseInt(req.query.page) || 1;
@@ -115,7 +115,7 @@ publicrouter.get("/quotes/character/:id", async (req, res) => {
       page,
       limit,
       total,
-      `/himym/quotes/character/${characterId}`,
+      `/himym/quotes/characters/${characterId}`,
       { character: characterId }
     );
 
@@ -128,7 +128,7 @@ publicrouter.get("/quotes/character/:id", async (req, res) => {
   }
 });
 
-publicrouter.get("/quotes/character/:id/random", async (req, res) => {
+publicrouter.get("/quotes/characters/:id/random", async (req, res) => {
   try {
     const characterId = parseInt(req.params.id);
     const character = await Character.findOne({ id: characterId });
